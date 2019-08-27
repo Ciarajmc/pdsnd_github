@@ -58,17 +58,17 @@ def load_data(city, month, day):
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
-    df['month'] = df['Start Time'].dt.month
-    df['day_of_week'] = df['Start Time'].dt.weekday_name
+    df['Month'] = df['Start Time'].dt.month
+    df['Day of Week'] = df['Start Time'].dt.weekday_name
 
     if month != 'all':
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
 
-        df = df[df['month'] == month]
+        df = df[df['Month'] == month]
 
     if day != 'all':
-        df = df[df['day_of_week'] == day.title()]
+        df = df[df['Day of Week'] == day.title()]
 
     return df
 
@@ -79,11 +79,11 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
     # TO DO: display the most common month
-    popular_month = df['month'].mode()[0]
+    popular_month = df['Month'].mode()[0]
     print('Most Common Month is {}'.format(popular_month))
 
     # TO DO: display the most common day of week
-    popular_day = df['day_of_week'].mode()[0]
+    popular_day = df['Day of Week'].mode()[0]
     print('Most Common Day is {}'.format(popular_day))
 
     # TO DO: display the most common start hour
@@ -169,6 +169,7 @@ def user_stats(df):
     print('-'*40)
 
 def display_data(df):
+    """ Asks user to if they would like the raw data used to compute the statistics displayed."""
 
     start_line = 0
     end_line = 5
@@ -197,8 +198,8 @@ def main():
         user_stats(df)
         display_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
+        if restart != 'yes':
             break
 
 
