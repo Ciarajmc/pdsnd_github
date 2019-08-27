@@ -7,8 +7,8 @@ Use Python to understand U.S. bikeshare data. Calculate statistics and build an 
 
 ### Files Used:
 
-bikeshare.py
-chicago.csv
-new_york_city.csv
-washington.csv
+bikeshare.py \n
+chicago.csv \n
+new_york_city.csv \n
+washington.csv \n
 
