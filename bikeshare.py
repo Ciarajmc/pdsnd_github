@@ -169,6 +169,7 @@ def user_stats(df):
     print('-'*40)
 
 def display_data(df):
+    """ Asks user to if they would like the raw data used to compute the statistics displayed."""
 
     start_line = 0
     end_line = 5
