@@ -1,12 +1,11 @@
-### Date created
-27-08-2019
+### Date Created: 27-08-2019
 
 ### Udacity Project - Explore US Bikeshare Data
 
-### Description
+### Description:
 Use Python to understand U.S. bikeshare data. Calculate statistics and build an interactive environment where a user chooses the data and filter for a dataset to analyze.
 
-### Files used
+### Files Used:
 
 bikeshare.py
 chicago.csv
